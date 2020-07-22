@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<!-- This is uses to menu selection-->
+{% block menu %}
+
+
+{%  endblock %}
+
+
+<!-- This is use to transfer home page content to base file-->
+
+{% block content %}
+
+<!-- Start Header -->
+<header class="header js-header-scroll ">
+
+
+    <nav hidden >
+        <div class="nav-header  ">
+            <a href="{% url 'home' %}" class="brand">
+                <img src="{% static 'brand/logo.png' %}" style="margin:-20px;" class="logo" alt="OneViro"/>
+            </a>
+
+            <button class="toggle-bar " >
+                <span class="fa fa-bars"></span>
+            </button>
+        </div>
+        <!-- Start Header menu for mobile -->
+        <div class="header__mobile js-header-menu ">
+            <a href="#" class="header__mobile-brand">Menu</a>
+            <button class="toggle-bar header__mobile-toggle">
+                <span class="fa fa-remove"></span>
+            </button>
+        </div>
+        <!-- End Header menu for mobile -->
+        <ul class="menu ">
+            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about-us' %}">About OneViro</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'career' %}">Career</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+
+    </nav>
+</header>
+<!-- Start Masthead -->
+<section class="masthead js-masthead-height pb-0">
+    <div class="masthead__style-overlay"></div>
+    <div class="masthead__style-watter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="masthead__content masthead__content-mtop">
+                        <img src="{% static 'brand/logo@2x.png' %}" class="footer__widget-logo" alt="Smooth"/>
+
+                        <h1 class="masthead__content-title">Where Creativity Meets Technology</h1>
+                        <p class="masthead__content-subtitle">We design and code world-class web and mobile solutions.
+                            Our ingenious digital products offer fully-fledged services for information solutions
+                            worldwide</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="masthead__style-watter--image">
+                        <!--                            <div class="masthead__style-watter&#45;&#45;icon flyIn">-->
+                        <!--                                <img src="{% static 'images/masthead-icon.png' %}" class="img-fluid" alt="Icon" />-->
+                        <!--                            </div>-->
+                        <img src="{% static 'images/businessman-meditating.png' %}" class="img-fluid"
+                             alt="Business Man"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Masthead -->
+
+
+<div class="section__divider section__divider-right d-none d-lg-block"></div>
+
+<!-- Start Section -->
+<section class="section pt-40 pb-0 sm-clear-pt">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-40">
+                <img src="{% static 'images/using-software.png' %}"   class="img-fluid" alt="Using Software"/>
+            </div>
+            <div class="col-lg-4 align-self-center mb-40">
+                <h3>What We Do – We Do It With Passion!
+                </h3>
+                <p>
+                    We beautifully design best in class solutions that are out of the box and provide a delightful
+                    consumer‑grade experience.
+
+                </p>
+                <a href="#" class="btn btn-primary btn-rounded">Learn more </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Section -->
+
+<div class="section__divider section__divider-left"></div>
+
+<!-- Start Section -->
+<section class="section pt-0 pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 order-lg-4 mb-40">
+                <img src="{% static 'images/businessman-with-laptop.png' %}" class="img-fluid"
+                     alt="Business Man with Laptop"/>
+            </div>
+            <div class="col-lg-4 align-self-center mb-40">
+                <h2>Build For
+                    Enterprise System
+                </h2>
+                <p>
+                    We start each new partnership with an in‑depth discovery phase to immerse ourselves in your
+                    business. We interview stakeholders, conduct user research, analyze your competition, and
+                    consolidate content. The result is an action plan on executing a holistic brand and user
+                    experience. </p>
+                <a href="#" class="btn btn-primary btn-rounded">Learn more </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Section -->
+
+<div class="section__divider section__divider-right"></div>
+
+<!-- Start Section -->
+<section class="section pt-0 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-40">
+                <img src="{% static 'images/lady-with-handphone.png' %}" class="img-fluid" alt="Lady with handphone"/>
+            </div>
+            <div class="col-lg-4 align-self-center mb-40">
+                <h2>Start-Up</h2>
+                <p>
+                    We partner with startups big and small all the time. What can be better than helping founders bring
+                    to life ideas the world has never seen before? We enjoy a fast‑moving environment that challenges
+                    our skillset and process.
+
+                    The ultimate achievement for us is seeing our startup clients grow and take over the world.
+
+                    We have special discounted rates for startups we believe in. Email us your idea to learn more.
+
+
+                </p>
+                <a href="#" class="btn btn-primary btn-rounded">Learn more </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Section -->
+
+
+{% endblock %}

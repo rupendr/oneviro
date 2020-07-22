@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<!-- This is uses to menu selection-->
+{% block menu %}
+
+{%  endblock %}
+
+<!-- This is use to transfer home page content to base file-->
+
+{% block content %}
+<header class="header js-header-scroll">
+    <nav hidden>
+        <div class="nav-header">
+            <a href="{% url 'home' %}" class="brand">
+                <img src="{% static 'brand/logo.png' %}" style="margin:-12px;" class="logo" alt="OneViro"/>
+            </a>
+            <button class="toggle-bar">
+                <span class="fa fa-bars"></span>
+            </button>
+        </div>
+        <!-- Start Header menu for mobile -->
+        <div class="header__mobile js-header-menu">
+            <a href="#" class="header__mobile-brand">Menu</a>
+            <button class="toggle-bar header__mobile-toggle">
+                <span class="fa fa-remove"></span>
+            </button>
+        </div>
+        <!-- End Header menu for mobile -->
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li class="active"><a href="{% url 'about-us' %}">About OneViro</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'career' %}">Career</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+
+        </ul>
+
+    </nav>
+</header>
+<!-- Start breadcrumb -->
+<section class="innerpage__head">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'about-us' %}">About us</a></li>
+        </ol>
+    </div>
+</section>
+<!-- End breadcrumb -->
+
+<!-- Start Section -->
+<section class="section pt-40 pb-0">
+    <div class="container">
+        <div class="hero__standout">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero__standout--headline">
+                        <h2 class="section__heading">Hello Buddy..!<br> Welcome to Smooth </h2>
+                        <div class="headline">We are build awesome marketing template</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero__standout--content">
+                        <p>
+                            OneViro is a premier software development company, offering a wide range of web and mobile
+                            solutions across the globe. We have substantial experience building custom software
+                            solutions and a deep understanding of how businesses work, making us the perfect development
+                            partner.</p>
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-rounded btn-stroke">Get in touch with
+                            us </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Section -->
+
+
+<!-- Start Section -->
+<section class="section section__gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h2 class="section__heading section__heading-center">Meet our team</h2>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="card-deck">
+            <!-- Start screenhot 01 -->
+            {% for member in team_data %}
+            <div class="item">
+                <div class="team__card mb-0">
+                    <div class="team__thumbnail">
+                        <img src="{{member.profile_image.url}}" class="img-fluid" alt=""
+                             style="width: auto; height: 360px; max-width: 400px;"/>
+                    </div>
+                    <div class="team__content">
+                        <div class="team__content--heading">
+                            <h4 class="team__name">{{member.name|title}}</h4>
+                            <span class="team__position">{{member.designation|title}}</span>
+                        </div>
+
+                        <ul class="team__network">
+                            <li><a href="{{member.facebook_link}}" class="team__network--link"><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{member.twitter_link}}" class="team__network--link"><i
+                                    class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{member.linkedin_link}}" class="team__network--link"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}        <!-- End screenhot 01 -->
+        </div>
+
+    </div>
+</section>
+
+
+<!-- End Section -->
+
+<!-- Start Section -->
+
+<!-- End Section -->
+{% endblock %}

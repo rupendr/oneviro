@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- This is uses to menu selection-->
+{% block menu %}
+
+{%  endblock %}
+
+
+<!-- This is use to transfer home page content to base file-->
+{% block content %}
+<header class="header js-header-scroll">
+    <nav hidden>
+        <div class="nav-header">
+            <a href="{% url 'home' %}" class="brand">
+                <img src="{% static 'brand/logo.png' %}" style="margin:-12px;" class="logo" alt="OneViro"/>
+            </a>
+            <button class="toggle-bar">
+                <span class="fa fa-bars"></span>
+            </button>
+        </div>
+        <!-- Start Header menu for mobile -->
+        <div class="header__mobile js-header-menu">
+            <a href="#" class="header__mobile-brand">Menu</a>
+            <button class="toggle-bar header__mobile-toggle">
+                <span class="fa fa-remove"></span>
+            </button>
+        </div>
+        <!-- End Header menu for mobile -->
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about-us' %}">About OneViro</a></li>
+            <li class="active"><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'career' %}">Career</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+
+    </nav>
+</header>
+<!-- Start breadcrumb -->
+<section class="innerpage__head">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'services' %}">services</a></li>
+        </ol>
+    </div>
+</section>
+<!-- End breadcrumb -->
+
+<!-- Start Section -->
+<section class="section pt-40">
+    <div class="container">
+        <div class="notices__heading">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>We Do Best For You
+                    </h2>
+                    <h2 class="section__heading">Our services</h2>
+                </div>
+                <div class="col-lg-8">
+                    <div class="notices__content">
+                        <h2>Full Flexibility</h2>
+                        <p>With CodeLabs custom-built solution, the customer’s software is flexible enough that can grow
+                            and change accordingly with its business.
+                        </p>
+                        <h2>Full Ownership</h2>
+                        <p>We deliver product with full ownership and control to our customers. They can customize and
+                            upgrade according to their needs.
+                        </p>
+                        <h2>Technology Independent</h2>
+                        <p>We are a technology agnostic company. In other words, we don’t sell or promote specific
+                            technologies, so we’re 100% focused on our customers. We pick the right stack for our
+                            customer’s unique business needs and goals.
+                        </p>
+                        <h2>Competitive Advantages</h2>
+                        <p>A custom-built CodeLabs solution can boost your company’s performance and be a valuable
+                            asset.
+                        </p>
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-rounded btn-stroke">Get in touch with
+                            us </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="section__column section__column-left">
+                    <span class="icon icon-device column-icon"></span>
+                    <h4>Web Development</h4>
+                    <p>
+                        We understand the fact that to maintain the web presence of the organisation website plays an
+                        integral role in your business. Therefore, our professional experts take pride in working with
+                        the customers to empower them for market dominance. We create specialised custom and e-commerce
+                        websites according to customer’s need. </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="section__column section__column-left">
+                    <span class="icon icon-device column-icon"></span>
+                    <h4>Android Apps Development</h4>
+                    <p>
+                        At OneViro, we provide custom functionally pleasing apps as we work with our customers to build
+                        android apps that rapidly generate business revenue. Our android developers thoroughly control
+                        and assure the quality of the application. Our team has skills and creativity to design
+                        aesthetic user-friendly apps. </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="section__column section__column-left">
+                    <span class="icon icon-device column-icon"></span>
+                    <h4>iPhone & iPad Apps Development
+                    </h4>
+                    <p>
+                        With the increase in the popularity of iOS devices, we recognize the growing need to develop iOS
+                        apps. Our team develops and designs custom iOS applications that are not only seamless, user
+                        friendly, but also enhance your business growth for iPhone, iPad, and other Apple devices.
+                        Application backend and iOS widgets are with up-to-date platform features
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4">
+                <div class="section__column section__column-left">
+                    <span class="icon icon-chart column-icon"></span>
+                    <h4>Digital Marketing</h4>
+                    <p>
+                        Digital marketing is the component of marketing that utilizes internet and online based digital
+                        technologies such as desktop computers, mobile phones and other digital media and platforms to
+                        promote products and services. </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4">
+                <div class="section__column section__column-left">
+                    <span class="icon icon-hard-disk column-icon"></span>
+                    <h4>Web scraping
+                    </h4>
+                    <p>
+                        Web scraping, web harvesting, or web data extraction is data scraping used for extracting data
+                        from websites. Web scraping software may access the World Wide Web directly using the Hypertext
+                        Transfer Protocol, or through a web browser </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Section -->
+
+<!-- Start Section -->
+<!--<section class="section section__gray">-->
+<!--    <div class="container">-->
+<!--        <idv class="row">-->
+<!--            <div class="col-12">-->
+<!--                <div class="owl-active-nav">-->
+<!--                    <div class="owl-carousel js-owl-clients">-->
+<!--                        &lt;!&ndash; Start client 01 &ndash;&gt;-->
+<!--                        <div class="item">-->
+<!--                            <a href="#" class="client">-->
+<!--                                <img src="{% static 'images/clients/client_01-hover.png' %}" class="client_logo-hover"-->
+<!--                                     alt="Client name"/>-->
+<!--                                <img src="{% static 'images/clients/client_01.png' %}" class="client_logo"-->
+<!--                                     alt="Client name"/>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; End client 01 &ndash;&gt;-->
+
+<!--                        &lt;!&ndash; Start client 02 &ndash;&gt;-->
+<!--                        <div class="item">-->
+<!--                            <a href="#" class="client">-->
+<!--                                <img src="{% static 'images/clients/client_02-hover.png' %}" class="client_logo-hover"-->
+<!--                                     alt="Client name"/>-->
+<!--                                <img src="{% static 'images/clients/client_02.png' %}" class="client_logo"-->
+<!--                                     alt="Client name"/>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; End client 02 &ndash;&gt;-->
+
+<!--                        &lt;!&ndash; Start client 03 &ndash;&gt;-->
+<!--                        <div class="item">-->
+<!--                            <a href="#" class="client">-->
+<!--                                <img src="{% static 'images/clients/client_03-hover.png' %}" class="client_logo-hover"-->
+<!--                                     alt="Client name"/>-->
+<!--                                <img src="{% static 'images/clients/client_03.png' %}" class="client_logo"-->
+<!--                                     alt="Client name"/>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; End client 03 &ndash;&gt;-->
+
+<!--                        &lt;!&ndash; Start client 04 &ndash;&gt;-->
+<!--                        <div class="item">-->
+<!--                            <a href="#" class="client">-->
+<!--                                <img src="{% static 'images/clients/client_04-hover.png' %}" class="client_logo-hover"-->
+<!--                                     alt="Client name"/>-->
+<!--                                <img src="{% static 'images/clients/client_04.png' %}" class="client_logo"-->
+<!--                                     alt="Client name"/>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; End client 04 &ndash;&gt;-->
+
+<!--                        &lt;!&ndash; Start client 05 &ndash;&gt;-->
+<!--                        <div class="item">-->
+<!--                            <a href="#" class="client">-->
+<!--                                <img src="{% static 'images/clients/client_06-hover.png' %}" class="client_logo-hover"-->
+<!--                                     alt="Client name"/>-->
+<!--                                <img src="{% static 'images/clients/client_06.png' %}" class="client_logo"-->
+<!--                                     alt="Client name"/>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; End client 05 &ndash;&gt;-->
+
+<!--                        &lt;!&ndash; Start client 06 &ndash;&gt;-->
+<!--                        <div class="item">-->
+<!--                            <a href="#" class="client">-->
+<!--                                <img src="{% static 'images/clients/client_05-hover.png' %}" class="client_logo-hover"-->
+<!--                                     alt="Client name"/>-->
+<!--                                <img src="{% static 'images/clients/client_05.png' %}" class="client_logo"-->
+<!--                                     alt="Client name"/>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; End client 06 &ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </idv>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End Section &ndash;&gt;-->
+
+
+{% endblock %}

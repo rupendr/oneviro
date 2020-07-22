@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Start Header -->
+<header class="header js-header-scroll">
+    <nav hidden>
+        <div class="nav-header">
+            <a href="{% url 'home' %}" class="brand">
+                <img src="{% static 'brand/logo.png' %}" style="margin:-12px;" class="logo"  alt="OneViro"/>
+            </a>
+            <button class="toggle-bar">
+                <span class="fa fa-bars"></span>F
+            </button>
+        </div>
+        <!-- Start Header menu for mobile -->
+        <div class="header__mobile js-header-menu">
+            <a href="#" class="header__mobile-brand">Menu</a>
+            <button class="toggle-bar header__mobile-toggle">
+                <span class="fa fa-remove"></span>
+            </button>
+        </div>
+        <!-- End Header menu for mobile -->
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about-us' %}">About OneViro</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li class="active"><a href="{% url 'career' %}">Career</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+
+    </nav>
+</header>
+
+<!-- Start breadcrumb -->
+<section class="innerpage__head">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Page</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Career</li>
+        </ol>
+    </div>
+</section>
+<!-- End breadcrumb -->
+
+<!-- Start Section -->
+<section class="section pt-40">
+    <div class="container">
+        <!-- Start career 01 -->
+        <div class="career__wrapper">
+            <div class="row">
+                <div class="col-lg-7">
+                    <img src="{% static 'images/using-software.png' %}" class="img-fluid" alt=""/>
+                </div>
+                <div class="col-lg-5">
+                    <div class="career__content">
+                        <h3>Project manager</h3>
+                        <p>
+                            Perpetua vulputate moderatius te qui, oratio utamur te vim. Vix an sententiae interesset.
+                        </p>
+                        <label class="career__label">Requirement :</label>
+                        <ul class="career__list">
+                            <li>Human and living</li>
+                            <li>Have a brain</li>
+                            <li>Having two hands and complete fingers</li>
+                            <li>Can speak and not deaf</li>
+                            <li>Age 17-40</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-rounded btn-stroke">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End career 01 -->
+
+        <!-- Start career 02 -->
+        <div class="career__wrapper">
+            <div class="row">
+                <div class="col-lg-7">
+                    <img src="{% static 'images/businessman-with-laptop.png' %}" class="img-fluid" alt=""/>
+                </div>
+                <div class="col-lg-5">
+                    <div class="career__content">
+                        <h3>Web progremer</h3>
+                        <p>
+                            Affert audire accusam an vis te pri. Sea dicit apeirian in, perpetua vulputate moderatius te
+                            qui.
+                        </p>
+                        <label class="career__label">Requirement :</label>
+                        <ul class="career__list">
+                            <li>Human and living</li>
+                            <li>Have a brain</li>
+                            <li>Having two hands and complete fingers</li>
+                            <li>Can speak and not deaf</li>
+                            <li>Age 17-40</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-rounded btn-stroke">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End career 02 -->
+
+        <!-- Start career 03 -->
+        <div class="career__wrapper">
+            <div class="row">
+                <div class="col-lg-7">
+                    <img src="{% static 'images/lady-with-handphone.png' %}" class="img-fluid" alt=""/>
+                </div>
+                <div class="col-lg-5">
+                    <div class="career__content">
+                        <h3>UI/UX Mobile app</h3>
+                        <p>
+                            Vix an sententiae interesset. Affert audire accusam an vis debitis gubergren ea eum, quot
+                            instructior.
+                        </p>
+                        <label class="career__label">Requirement :</label>
+                        <ul class="career__list">
+                            <li>Human and living</li>
+                            <li>Have a brain</li>
+                            <li>Having two hands and complete fingers</li>
+                            <li>Can speak and not deaf</li>
+                            <li>Age 17-40</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-rounded btn-stroke">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End career 03 -->
+
+        <!-- Start career 04 -->
+        <div class="career__wrapper">
+            <div class="row">
+                <div class="col-lg-7">
+                    <img src="{% static 'images/vector-younglady-with-laptop.png' %}" class="img-fluid" alt=""/>
+                </div>
+                <div class="col-lg-5">
+                    <div class="career__content">
+                        <h3>Web designer</h3>
+                        <p>
+                            Dolore debitis gubergren ea eum, quot instructior te pri. Sea dicit apeirian in, perpetua
+                            vulputate moderatius.
+                        </p>
+                        <label class="career__label">Requirement :</label>
+                        <ul class="career__list">
+                            <li>Human and living</li>
+                            <li>Have a brain</li>
+                            <li>Having two hands and complete fingers</li>
+                            <li>Can speak and not deaf</li>
+                            <li>Age 17-40</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-rounded btn-stroke">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End career 04 -->
+    </div>
+</section>
+<!-- End Section -->
+
+
+{% endblock %}
